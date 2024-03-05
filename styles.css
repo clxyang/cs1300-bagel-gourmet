@@ -161,15 +161,18 @@ ul {
 }
 
 /* INFO LEFT COLUMN ====================================================================== */
+/* INFO LEFT COLUMN ====================================================================== */
 
 #contact-container {
     justify-self: right;
     padding-right: 10%;
     font-size: 18px;
     grid-column-start: 1;
+    grid-column-start: 1;
 }
 
 #bagels-img {
+    width: 350px;
     width: 350px;
 }
 
@@ -186,6 +189,7 @@ ul {
 }
 
 /* WELCOME BOX (RIGHT COLUMN) ====================================================================== */
+/* WELCOME BOX (RIGHT COLUMN) ====================================================================== */
 
 #welcome-container {
     padding-right: 3rem;
@@ -199,6 +203,7 @@ ul {
     font-size: 18px;
     border: 1px solid var(--dark-brown);
     margin: 0;
+    width:auto;
 }
 
 #welcome-text {
@@ -206,23 +211,32 @@ ul {
 }
 
 /* IMAGE GALLERY (SUB SECTION OF RIGHT COLUMN) ======================================================================= */
+/* IMAGE GALLERY (SUB SECTION OF RIGHT COLUMN) ======================================================================= */
 
+#gallery-container {
 #gallery-container {
     position: relative;
 }
 
 #gallery-header {
     margin-top: 1.2rem;
+#gallery-header {
+    margin-top: 1.2rem;
     display: flex;
+    align-content: stretch;
     align-content: stretch;
 }
 
 .menu-button {
     align-items: flex-end;
     width: 180px;
+.menu-button {
+    align-items: flex-end;
+    width: 180px;
     text-align: center;
 }
 
+.gallery-item {
 .gallery-item {
     display: grid;
     grid-gap: 0.7rem;
@@ -232,17 +246,23 @@ ul {
 .gallery-item > img {
     width: 150px;
     height: 150px;
+.gallery-item > img {
+    width: 150px;
+    height: 150px;
     margin: 0.6rem;
 }
 
 #media-scroller {
     background-color: var(--back-beige);
     border: 1px solid var(--dark-brown);
+    background-color: var(--back-beige);
+    border: 1px solid var(--dark-brown);
     display: grid;
     grid-auto-flow: column;
     grid-gap: 0.5rem;
+    grid-gap: 0.5rem;
     border-radius: 6px;
-    margin-right: -4rem;
+    /* margin-right: -4rem; */
 
     overflow-x: scroll;
     overscroll-behavior-inline: contain;

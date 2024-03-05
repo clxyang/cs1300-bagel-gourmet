@@ -217,14 +217,20 @@ ul {
 #gallery-header {
     margin-top: 1.2rem;
     display: flex;
-    align-content: stretch;
-    align-content: stretch;
+    align-items: stretch;
 }
 
-.menu-button {
+.menu-button-container {
     align-items: flex-end;
     width: 180px;
     text-align: center;
+    align-self: flex-end;
+    padding-left: 17.6rem;
+    /* TODO FIX */
+}
+
+#menu-button {
+    margin-right: 0;
 }
 
 .gallery-item {

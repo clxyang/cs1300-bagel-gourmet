@@ -73,6 +73,7 @@ ul {
     text-decoration: none;
     font-size: 1.3rem;
     padding-left: 50px;
+    width: 85%;
 }
 
 #navbar-menu {
@@ -84,6 +85,11 @@ ul {
     text-align: center;
     margin-left: auto;
     padding-right: 33px;
+}
+
+#navbar-hamburger {
+    display: none;
+    padding-right: 2rem;
 }
 
 .navbar-item {
@@ -124,11 +130,15 @@ ul {
     transition: 0.4s;
 } */
 
-@media screen and (max-width: 600px) {
-    #navbar-logo {
+/* Change navbar to be a hamburger when "Bagel Gourmet Cafe" no longer fits in one line  */
+@media screen and (max-width: 876px) {
+    #navbar-menu {
         display: none;
     }
-  }
+    #navbar-hamburger {
+        display: contents;
+    }
+}
 
 /* WELCOME HEADER ====================================================================== */
 
@@ -137,6 +147,8 @@ ul {
     grid-column-start: 2;
     grid-row-start: 1;
     text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 #welcome-title {
@@ -152,12 +164,13 @@ ul {
 /* INFO ====================================================================== */
 
 #info-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     width: 70%;
     align-self: center;
     justify-self: center;
+    justify-items: center;
     object-fit: contain;
+    margin-right: 9rem;
 }
 
 /* INFO LEFT COLUMN ====================================================================== */
@@ -166,13 +179,11 @@ ul {
     justify-self: right;
     padding-right: 10%;
     font-size: 18px;
-    grid-column-start: 1;
-    grid-column-start: 1;
+    /* width: 40%; */
 }
 
 #bagels-img {
-    width: 350px;
-    width: 350px;
+    max-width: 350px;
 }
 
 #contact-info {
@@ -185,6 +196,19 @@ ul {
     grid-template-columns: 0.2fr 2fr;
     padding: 5px;
     align-items: center;
+}
+
+@media screen and (max-width: 816px) {
+    #info-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        align-items: center;
+        margin-right: 0;
+    }
+    #contact-container {
+        padding-right: 0;
+    }
 }
 
 /* WELCOME BOX (RIGHT COLUMN) ====================================================================== */
@@ -208,29 +232,24 @@ ul {
     margin: 18px;
 }
 
+@media screen and (max-width: 816px) {
+    #welcome-container {
+        padding-right: 0;
+    }
+}
+
 /* IMAGE GALLERY (SUB SECTION OF RIGHT COLUMN) ======================================================================= */
 
 #gallery-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 #gallery-header {
     margin-top: 1.2rem;
     display: flex;
     align-items: stretch;
-}
-
-.menu-button-container {
-    align-items: flex-end;
-    width: 180px;
-    text-align: center;
-    align-self: flex-end;
-    padding-left: 17.6rem;
-    /* TODO FIX */
-}
-
-#menu-button {
-    margin-right: 0;
 }
 
 .gallery-item {
@@ -245,6 +264,11 @@ ul {
     margin: 0.6rem;
 }
 
+.gallery-item > p {
+    text-align: center;
+    margin-top: -0.2rem;
+}
+
 #media-scroller {
     background-color: var(--back-beige);
     border: 1px solid var(--dark-brown);
@@ -255,15 +279,22 @@ ul {
     grid-gap: 0.5rem;
     grid-gap: 0.5rem;
     border-radius: 6px;
-    /* margin-right: -4rem; */
 
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
 
-    /* opacity: 1; */
     top: 100%;
     transition: all 0.3s linear;
-    margin-bottom: -23rem;
+}
+
+.menu-button-container {
+    width: 180px;
+    text-align: center;
+    margin-bottom: -50px;
+}
+
+#menu-button {
+    margin-left: 0;
 }
 
 /* #media-scroller.reveal {
@@ -318,22 +349,21 @@ footer {
     align-items: center;
     flex-direction: column;
     height: auto;
-    min-height: 70px;
+    min-height: 80px;
     padding: 15px;
     text-align: center;
 }
 
 #footer-content {
-    color:rgb(243, 225, 251);
+    color: var(--med-red);
     text-decoration: none;
-    font-size: 13.5px;
+    font-size: 15px;
     line-height: 1;
-    font-family: 'Mulish', sans-serif;
     font-weight: lighter;
 
     transition: all 0.1s linear;
 }
 
 #footer-content:hover {
-    color:rgb(198, 164, 208);
+    opacity: 40%;
 }

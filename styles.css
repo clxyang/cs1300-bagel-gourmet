@@ -161,7 +161,6 @@ ul {
 }
 
 /* INFO LEFT COLUMN ====================================================================== */
-/* INFO LEFT COLUMN ====================================================================== */
 
 #contact-container {
     justify-self: right;
@@ -189,7 +188,6 @@ ul {
 }
 
 /* WELCOME BOX (RIGHT COLUMN) ====================================================================== */
-/* WELCOME BOX (RIGHT COLUMN) ====================================================================== */
 
 #welcome-container {
     padding-right: 3rem;
@@ -211,15 +209,11 @@ ul {
 }
 
 /* IMAGE GALLERY (SUB SECTION OF RIGHT COLUMN) ======================================================================= */
-/* IMAGE GALLERY (SUB SECTION OF RIGHT COLUMN) ======================================================================= */
 
-#gallery-container {
 #gallery-container {
     position: relative;
 }
 
-#gallery-header {
-    margin-top: 1.2rem;
 #gallery-header {
     margin-top: 1.2rem;
     display: flex;
@@ -230,22 +224,15 @@ ul {
 .menu-button {
     align-items: flex-end;
     width: 180px;
-.menu-button {
-    align-items: flex-end;
-    width: 180px;
     text-align: center;
 }
 
-.gallery-item {
 .gallery-item {
     display: grid;
     grid-gap: 0.7rem;
     border-radius: 2px;
 }
 
-.gallery-item > img {
-    width: 150px;
-    height: 150px;
 .gallery-item > img {
     width: 150px;
     height: 150px;

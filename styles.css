@@ -175,6 +175,7 @@ ul {
 
 #welcome-body {
     font-size: 1.9rem;
+    font-weight: 100;
     color: var(--dark-brown);
 }
 

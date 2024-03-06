@@ -166,7 +166,6 @@ ul {
 #contact-container {
     padding-right: 10%;
     font-size: 18px;
-    /* width: 40%; */
 }
 
 #bagels-img {
@@ -185,6 +184,7 @@ ul {
     align-items: center;
 }
 
+/* Change layout to be single column once paragraph gets squished */
 @media screen and (max-width: 816px) {
     #info-container {
         flex-direction: column;
@@ -198,7 +198,7 @@ ul {
     }
 }
 
-/* TODO */
+/* Adjust image size for mobile */
 @media screen and (max-width: 450px) { 
     #bagels-img {
         max-width: 260px;
@@ -229,6 +229,7 @@ ul {
     margin: 18px;
 }
 
+/* Adjust paragraph sizing for one-column format screen */
 @media screen and (max-width: 816px) {
     #welcome-text-container {
         margin-right: auto;

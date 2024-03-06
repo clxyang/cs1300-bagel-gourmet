@@ -1,3 +1,5 @@
+/* FULL PAGE CSS */
+
 :root {
     --back-beige: #FFDAB9;
     --med-red: #8c2626;
@@ -18,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
 }
 
 /* NAVBAR ====================================================================== */
@@ -35,8 +37,9 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-items: stretch;
     font-size: 1.1rem;
-    position:absolute;
+    position: absolute;
     top: 0;
     z-index: 999;
     transition: all 0.3s linear;
@@ -63,33 +66,33 @@ ul {
 
 #navbar-logo {
     font-family: "Jomolhari", serif;
-    background-color: var(--dark-brown);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    background-color: var(--back-beige);
     display: flex;
     align-items: center;
     text-decoration: none;
     font-size: 1.3rem;
-    padding-left: 50px;
-    width: 85%;
+    padding-left: 40px;
+    width: 77%;
 }
 
 #navbar-menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    list-style: none;
     height: 100%;
     text-align: center;
     margin-left: auto;
     padding-right: 33px;
 }
 
-#navbar-hamburger {
+.navbar-hamburger {
     display: none;
-    padding-right: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    margin-left: auto;
+    padding-right: 33px;
 }
 
 .navbar-item {
@@ -115,28 +118,13 @@ ul {
     line-height: height;
 }
 
-/* #hamburger-icon {
-    right: 0;
-    margin-top: auto;
-    display: block;
-    cursor: pointer;
-}
-
-#hamburger-icon div {
-    width: 35px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-} */
-
 /* Change navbar to be a hamburger when "Bagel Gourmet Cafe" no longer fits in one line  */
 @media screen and (max-width: 876px) {
     #navbar-menu {
         display: none;
     }
-    #navbar-hamburger {
-        display: contents;
+    .navbar-hamburger {
+        display: flex;
     }
 }
 
@@ -176,7 +164,6 @@ ul {
 /* INFO LEFT COLUMN ====================================================================== */
 
 #contact-container {
-    justify-self: right;
     padding-right: 10%;
     font-size: 18px;
     /* width: 40%; */
@@ -204,20 +191,29 @@ ul {
         flex-wrap: wrap;
         row-gap: 1rem;
         align-items: center;
-        margin-right: 0;
+        margin: 0;
     }
     #contact-container {
         padding-right: 0;
     }
 }
 
+/* TODO */
+@media screen and (max-width: 450px) { 
+    #bagels-img {
+        max-width: 260px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 /* WELCOME BOX (RIGHT COLUMN) ====================================================================== */
 
 #welcome-container {
-    padding-right: 3rem;
     align-content: flex-start;
-    width: 70%;
-    object-fit: contain;
+    width: 65%;
+    justify-self: right;
 }
 
 #welcome-text-container {
@@ -225,7 +221,8 @@ ul {
     font-size: 18px;
     border: 1px solid var(--dark-brown);
     margin: 0;
-    width:auto;
+    width: auto;
+    margin-right: 3rem;
 }
 
 #welcome-text {
@@ -233,8 +230,11 @@ ul {
 }
 
 @media screen and (max-width: 816px) {
+    #welcome-text-container {
+        margin-right: auto;
+    }
     #welcome-container {
-        padding-right: 0;
+        width: 100%;
     }
 }
 
@@ -244,6 +244,7 @@ ul {
     position: relative;
     display: flex;
     flex-direction: column;
+    margin-right: 3rem;
 }
 
 #gallery-header {
@@ -297,42 +298,6 @@ ul {
     margin-left: 0;
 }
 
-/* #media-scroller.reveal {
-    opacity: 1;
-    top: 100%;
-    margin-bottom: 0rem;
-    overscroll-behavior-inline: contain; 
-    /* TO-DO^ */
-
-/* #media-scroller.unreveal {
-    animation: growUp 0.5s ease-in-out forwards
-}
-
-@keyframes growDown {
-    0% { 
-        opacity: 0;
-        transform: translateY(-80px);
-    }
-    
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes growUp {
-    0% { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    100% {
-        opacity: 0;
-        transform: translateY(-80px);
-    }
-} */
-
-
 .snaps-inline {
     scroll-snap-type: inline mandatory;
 }
@@ -341,14 +306,19 @@ ul {
     scroll-snap-align: start;
 }
 
+@media screen and (max-width: 400px) {
+    #gallery-container {
+        margin-right: 0;
+    }
+}
+
 /* CONTACT ====================================================================== */
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: auto;
+    flex-direction: row;
     min-height: 80px;
     padding: 15px;
     text-align: center;
@@ -364,6 +334,6 @@ footer {
     transition: all 0.1s linear;
 }
 
-#footer-content:hover {
+.footer-button:hover {
     opacity: 40%;
 }

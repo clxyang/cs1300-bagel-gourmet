@@ -38,7 +38,7 @@ body {
     display: flex;
     align-items: center;
     justify-items: stretch;
-    font-size: 1.1rem;
+    font-size: medium;
     position: absolute;
     top: 0;
     z-index: 999;
@@ -70,7 +70,7 @@ ul {
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: large;
     padding-left: 40px;
     width: 74%;
     position: absolute;
@@ -195,7 +195,7 @@ ul {
 
 #contact-container {
     padding-right: 10%;
-    font-size: 18px;
+    font-size: medium;
 }
 
 #bagels-img {
@@ -248,7 +248,7 @@ ul {
 
 #welcome-text-container {
     color: var(--med-red);
-    font-size: 18px;
+    font-size: medium;
     border: 1px solid var(--dark-brown);
     margin: 0;
     width: auto;
@@ -358,7 +358,7 @@ footer {
 #footer-content {
     color: var(--med-red);
     text-decoration: none;
-    font-size: 15px;
+    font-size: medium;
     line-height: 1;
     font-weight: lighter;
 
